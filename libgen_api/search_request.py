@@ -56,7 +56,7 @@ class SearchRequest:
             )
         elif self.search_type.lower() == "isbn":
             search_url = (
-                f"https://www.libgen.is/search.php??req={query_parsed}&column=identifier"
+                f"https://www.libgen.is/search.php?req={query_parsed}&column=identifier"
             )
         search_page = requests.get(search_url)
         return search_page
